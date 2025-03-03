@@ -14,6 +14,7 @@ tokenizer_ru_en = AutoTokenizer.from_pretrained(MODEL_PATH_RU_EN, local_files_on
 model_ru_en = AutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH_RU_EN, local_files_only=True)
 model_ru_en.eval()
 
+
 # Функция для перевода
 def batch_translate(texts, tokenizer, model):
     if not texts:
@@ -26,8 +27,10 @@ def batch_translate(texts, tokenizer, model):
 
     return tokenizer.batch_decode(translated, skip_special_tokens=True)
 
+
 def translate_from_en_to_ru(words):
     return batch_translate(words, tokenizer_en_ru, model_en_ru)
+
 
 def translate_from_ru_to_en(words):
     return batch_translate(words, tokenizer_ru_en, model_ru_en)
