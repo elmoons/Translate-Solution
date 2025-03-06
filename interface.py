@@ -82,4 +82,4 @@ btn_open = tk.Button(root, text="Выбрать файл", command=open_file)
 btn_open.pack(pady=20)
 
 root.protocol("WM_DELETE_WINDOW", closing_program)
-root.mainloop()
+
