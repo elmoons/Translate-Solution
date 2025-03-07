@@ -56,7 +56,7 @@ info_label.pack(padx=20, pady=10)
 # Меню выбора языка
 menubar = tk.Menu(root)
 language_menu = tk.Menu(menubar, tearoff=0)
-languages = ["Английский"]
+languages = ["Английский", "Латышский", "Эстонский", "Норвежский"]
 
 
 def create_language_menu():

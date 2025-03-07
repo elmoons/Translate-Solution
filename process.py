@@ -15,6 +15,10 @@ def process_excel(input_path: str, output_path: str, language: str, direction: s
         translated_words = translate_from_en_to_ru(words.tolist())
     elif direction == "на выбранный" and language == "Английский":
         translated_words = translate_from_ru_to_en(words.tolist())
+    elif direction == "на Русский" and language == "Латышский":
+        translated_words = translate_from_lv_to_ru(words.tolist())
+    elif direction == "на выбранный" and language == "Латышский":
+        translated_words = translate_from_ru_to_lv(words.tolist())
 
     # Вставляем перевод обратно с сохранением индексов
     df_input.loc[indexes, 1] = translated_words
